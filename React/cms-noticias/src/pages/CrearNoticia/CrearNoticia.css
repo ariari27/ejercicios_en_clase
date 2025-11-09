@@ -1,0 +1,87 @@
+.crear-noticia-container {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: #4e3e13;
+    font-family: 'Georgia', serif;
+
+    /* Flex para centrar todo el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crear-noticia-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #3b2f0a;
+}
+
+.crear-noticia-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* CENTRA LOS INPUTS */
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    /* Limita ancho de los campos para que no se vean estirados */
+}
+
+.crear-noticia-form input[type="text"],
+.crear-noticia-form textarea,
+.crear-noticia-form select,
+.crear-noticia-form input[type="file"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #8b7355;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4e3e13;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crear-noticia-form textarea {
+    resize: vertical;
+    font-family: 'Georgia', serif;
+}
+
+.crear-noticia-form button {
+    width: 100%;
+    max-width: 250px;
+    /* botón centrado y tamaño coherente */
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #a67c52;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.crear-noticia-form button:hover {
+    background-color: #8b5e3c;
+}
+
+/* Placeholder */
+.crear-noticia-form input::placeholder,
+.crear-noticia-form textarea::placeholder {
+    color: #7a5a3c;
+    font-style: italic;
+}
+
+/* input file */
+.crear-noticia-form input[type="file"] {
+    padding: 0.4rem 0.8rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid #8b7355;
+}

@@ -1,0 +1,177 @@
+/* 📰 Contenedor principal */
+.noticias-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Georgia', serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* 🧩 Layout con aside */
+.noticias-layout {
+    display: flex;
+    gap: 2rem;
+}
+
+/* 🎚️ Aside de filtros */
+.noticias-aside {
+    flex: 0 0 220px;
+    background: #fff8f0;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+    /* se mantiene visible al hacer scroll */
+}
+
+.noticias-aside h3 {
+    margin-bottom: 1rem;
+    color: #4e3e13;
+    text-align: center;
+}
+
+.noticias-aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noticias-aside li {
+    margin-bottom: 0.5rem;
+}
+
+.noticias-aside button {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #c7b299;
+    background: #fff8f0;
+    cursor: pointer;
+    color: #4e3e13;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.noticias-aside button:hover,
+.noticias-aside button.activo {
+    background: #d9c4a7;
+    transform: translateY(-1px);
+}
+
+/* 📰 Lista de noticias */
+.noticias-list {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* 🏷️ Encabezado de categoría */
+.categoria-header {
+    background-color: #fff4e6;
+    padding: 1.2rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.categoria-header h2 {
+    font-size: 1.8rem;
+    color: #4e3e13;
+    margin-bottom: 0.4rem;
+}
+
+.categoria-header p {
+    font-size: 1rem;
+    color: #5a4631;
+    margin: 0;
+}
+
+/* 🌿 Animación suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🧭 RESPONSIVE DESIGN */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+    .noticias-layout {
+        gap: 1.5rem;
+    }
+
+    .noticias-aside {
+        flex: 0 0 180px;
+    }
+
+    .categoria-header h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Pantallas medianas (≤768px) */
+@media (max-width: 768px) {
+    .noticias-layout {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        /* 💡 centra el aside verticalmente */
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .noticias-aside {
+        position: static;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noticias-aside ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .noticias-aside button {
+        width: auto;
+        min-width: 100px;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+/* Móviles pequeños (≤480px) */
+@media (max-width: 480px) {
+    .noticias-page {
+        padding: 1.2rem;
+    }
+
+    .categoria-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .categoria-header p {
+        font-size: 0.9rem;
+    }
+
+    .noticias-list {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}

@@ -1,0 +1,118 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background: rgba(245, 240, 230, 0.9); /* Blanco antiguo translúcido */
+    border-bottom: 1px solid rgba(200, 180, 150, 0.5);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    color: #3e2f1c;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    z-index: 1001; /* para que quede encima del menú */
+}
+
+.logo-strong {
+    color: #a67c52;
+}
+
+/* --- Navegación principal --- */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    color: #5b4636;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Georgia', serif;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a67c52;
+}
+
+.nav-links .active {
+    color: #3e2f1c;
+    border-bottom: 2px solid #a67c52;
+    padding-bottom: 3px;
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 100%;
+    background: #3e2f1c;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Modo móvil --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: rgba(245, 240, 230, 0.97);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        transition: right 0.4s ease;
+    }
+
+    .nav-links.open {
+        right: 0;
+    }
+
+    /* Animación del icono */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translateY(7px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-7px);
+    }
+}

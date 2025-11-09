@@ -1,0 +1,132 @@
+.home {
+    display: flex;
+    flex-direction: column; /* 🔹 Asegura estructura vertical */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 🔹 Ocupa toda la pantalla */
+    text-align: center;
+    color: #3e2f1c;
+    background: linear-gradient(to bottom, #f5f0e6, #e4d7b2);
+    padding: 2rem;
+    box-sizing: border-box; /* Evita overflow */
+}
+
+.home-content {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Titular principal */
+.home-content h1 {
+    font-size: 2.5rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.home-content h1 span {
+    color: #a67c52;
+}
+
+/* Descripción */
+.home-content p {
+    font-size: 1.2rem;
+    color: #5b4636;
+}
+
+/* Botones */
+.home-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.home-btn {
+    padding: 0.9rem 1.5rem;
+    border: none;
+    background-color: #a67c52;
+    color: #f5f0e6;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: 'Georgia', serif;
+    width: 220px;
+}
+
+.home-btn:hover {
+    background-color: #8e613d;
+    transform: translateY(-2px);
+}
+
+.home-btn.secondary {
+    background-color: #5b4636;
+}
+
+.home-btn.secondary:hover {
+    background-color: #3e2f1c;
+}
+
+.home-btn.logout {
+    background-color: #b85c38;
+}
+
+.home-btn.logout:hover {
+    background-color: #8e3f25;
+}
+
+/* 🧭 RESPONSIVE DESIGN */
+
+/* Tablets (768px o menos) */
+@media (max-width: 768px) {
+    .home {
+        padding: 3rem 1.5rem;
+        min-height: 100vh; /* 🔹 Mantiene altura completa */
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-buttons {
+        gap: 0.8rem;
+    }
+
+    .home-btn {
+        width: 200px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles pequeños (480px o menos) */
+@media (max-width: 480px) {
+    .home {
+        padding: 2rem 1rem;
+        justify-content: space-evenly; /* 🔹 Reparte bien el contenido verticalmente */
+        min-height: 100vh; /* 🔹 Llena toda la pantalla */
+    }
+
+    .home-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-content p {
+        font-size: 0.95rem;
+    }
+
+    .home-buttons {
+        gap: 0.7rem;
+    }
+
+    .home-btn {
+        width: 100%;
+        max-width: 240px;
+        font-size: 0.9rem;
+    }
+}

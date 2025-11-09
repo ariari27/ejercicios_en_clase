@@ -1,0 +1,162 @@
+/* 🎛️ Contenedor principal */
+.dashboard-noticias-container {
+    max-width: 1280px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    color: #4e3e13;
+    font-family: 'Georgia', serif;
+}
+
+/* 🔘 Botón principal (crear nueva noticia, etc.) */
+.dashboard-btn {
+    padding: 0.6rem 1.2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #a67c52;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.dashboard-btn:hover {
+    background-color: #7c5a3c;
+    transform: translateY(-2px);
+}
+
+/* 📋 Tabla */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    table-layout: fixed; /* evita desbordamientos */
+    word-wrap: break-word;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    border: 1px solid #ddd;
+    padding: 0.9rem;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.dashboard-table th {
+    background-color: #d9c6a3;
+    color: #3e2f1c;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-table tr:nth-child(even) {
+    background-color: #fff8f0;
+}
+
+.dashboard-table tr:hover {
+    background-color: #f2e2c9;
+}
+
+/* 🧩 Botones dentro de la tabla */
+.dashboard-table td button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-right: 0.3rem;
+}
+
+/* Evitar que los botones se desborden */
+.dashboard-table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 🧭 RESPONSIVE DESIGN */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+    .dashboard-noticias-container {
+        padding: 1rem;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    .dashboard-btn {
+        width: auto;
+    }
+
+    .dashboard-table td button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Móviles medianos (≤768px) */
+@media (max-width: 768px) {
+    .dashboard-noticias-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .dashboard-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 10px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .dashboard-table td button {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .dashboard-btn {
+        width: 100%;
+    }
+}
+
+/* Móviles pequeños (≤480px) */
+@media (max-width: 480px) {
+    .dashboard-noticias-container {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    .dashboard-table td button {
+        display: inline-block;
+        width: auto;
+        min-width: 70px;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .dashboard-btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}

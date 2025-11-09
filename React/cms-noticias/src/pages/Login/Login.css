@@ -1,0 +1,76 @@
+/* ====== LOGIN VINTAGE ====== */
+.login-container {
+    background: rgba(245, 240, 230, 0.95); /* Fondo tipo papel antiguo */
+    backdrop-filter: blur(6px);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    margin: 4rem auto;
+    color: #3e2f1c; /* Marrón oscuro */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    font-family: 'Georgia', serif;
+}
+
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #a67c52; /* Marrón tierra para el título */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #c8b496; /* borde vintage suave */
+    border-radius: 6px;
+    outline: none;
+    font-size: 1rem;
+    background-color: #f5f0e6; /* mismo tono de papel antiguo */
+    color: #3e2f1c;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #a67c52;
+}
+
+button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #a67c52; /* botón marrón tierra */
+    color: #f5f0e6; /* texto claro */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #8e613d;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    background: rgba(255, 0, 0, 0.15);
+    color: #f87171;
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    text-align: center;
+}

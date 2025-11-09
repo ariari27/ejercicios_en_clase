@@ -1,0 +1,22 @@
+.footer {
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(245, 240, 230, 0.9);
+    border-top: 1px solid rgba(200, 180, 150, 0.5);
+    color: #5b4636;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    font-family: 'Georgia', serif;
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer p {
+    color: #3e2f1c;
+    font-weight: bold;
+}

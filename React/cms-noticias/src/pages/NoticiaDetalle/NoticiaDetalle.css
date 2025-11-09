@@ -1,0 +1,72 @@
+.detalle-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fffdf8;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detalle-imagen {
+    width: 100%;
+    max-height: 500px;
+    object-fit: fill;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-container h1 {
+    font-size: 2rem;
+    color: #3d2e0f;
+    margin-bottom: 0.6rem;
+}
+
+.detalle-subtitulo {
+    font-size: 1.2rem;
+    color: #6b5537;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.detalle-fecha {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.detalle-contenido {
+    color: #333;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    white-space: pre-line;
+    margin-bottom: 2rem;
+}
+
+.detalle-autor {
+    text-align: right;
+    color: #4e3e13;
+    font-size: 1rem;
+}
+.volver-btn {
+    background-color: #f7e7ce;
+    color: #4e3e13;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.volver-btn:hover {
+    background-color: #f2d9b6;
+    transform: translateY(-2px);
+}
+
+.volver-btn:active {
+    transform: translateY(1px);
+}
